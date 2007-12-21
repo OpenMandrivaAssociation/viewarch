@@ -13,6 +13,7 @@ Patch0: %name-confpath.patch
 License: GPL
 Group: Networking/WWW
 Url: http://arch.bluegate.org/viewarch.html
+BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: tla
 Requires: python
 Requires: apache
