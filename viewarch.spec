@@ -2,7 +2,7 @@
 %define realname ViewARCH
 %define realversion 0.0.12-9
 %define version %(echo %realversion | sed 's/-/_/g')
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary: An archive browser for GNU arch
 Name: %{name}
@@ -13,11 +13,11 @@ Patch0: %name-confpath.patch
 License: GPL
 Group: Networking/WWW
 Url: http://arch.bluegate.org/viewarch.html
-BuildRoot: %{_tmppath}/%{name}-buildroot
 Requires: tla
 Requires: python
 Requires: apache
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 An archive browser for GNU arch.
@@ -27,7 +27,7 @@ An archive browser for GNU arch.
 %patch0 -p0 -b .confpath
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 mkdir -p %buildroot/%_datadir/%name/lib
 mkdir -p %buildroot/%_sysconfdir/%name
@@ -64,13 +64,17 @@ cat > %buildroot/%_sysconfdir/httpd/conf/webapps.d/%name.conf <<EOF
 EOF
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post
+%if %mdkversion < 201010
 %_post_webapp
+%endif
 
 %postun
+%if %mdkversion < 201010
 %_postun_webapp
+%endif
 
 %files
 %defattr(-,root,root)
