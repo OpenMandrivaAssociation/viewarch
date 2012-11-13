@@ -1,0 +1,19 @@
+--- ./cgi/viewarch.cgi.nanar	2006-03-03 00:10:34.204621590 +0100
++++ ./cgi/viewarch.cgi	2006-03-03 00:09:33.404725503 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python
++#!/usr/bin/python
+ ################################################################
+ #
+ # Copyright (C) 2004 Tez Kamihira
+--- ./lib/config.py.nanar	2006-03-02 23:29:52.810531564 +0100
++++ ./lib/config.py	2006-03-02 23:30:39.650436362 +0100
+@@ -42,7 +42,7 @@
+ def _main():
+ 
+     cfg = Config()
+-    cfg.load_config("../viewarch.conf")
++    cfg.load_config("/etc/viewarch/viewarch.conf")
+ 
+     #print cfg.general.archives_list
+     #print cfg.general
