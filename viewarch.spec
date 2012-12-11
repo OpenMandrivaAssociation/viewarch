@@ -84,3 +84,45 @@ rm -rf %{buildroot}
 %dir %_sysconfdir/%name
 %config(noreplace) %_sysconfdir/%name/viewarch.conf
 
+
+
+%changelog
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 0.0.12_9-8mdv2011.0
++ Revision: 615390
+- the mass rebuild of 2010.1 packages
+
+* Sun Jan 17 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.0.12_9-7mdv2010.1
++ Revision: 492716
+- rely on filetrigger for reloading apache configuration begining with 2010.1, rpm-helper macros otherwise
+
+* Wed Sep 09 2009 Thierry Vignaud <tv@mandriva.org> 0.0.12_9-6mdv2010.0
++ Revision: 434672
+- rebuild
+
+* Sun Aug 03 2008 Thierry Vignaud <tv@mandriva.org> 0.0.12_9-5mdv2009.0
++ Revision: 261850
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.0.12_9-4mdv2009.0
++ Revision: 255522
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.0.12_9-2mdv2008.1
++ Revision: 136570
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Thu Aug 10 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/10/06 01:39:12 (55286)
+- rebuild
+
+* Thu Aug 10 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/10/06 01:38:12 (55285)
+Import viewarch
+
+* Thu Mar 02 2006 Olivier Thauvin <nanardon@mandriva.org> 
+- initial rpm
+
