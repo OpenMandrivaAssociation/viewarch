@@ -1,13 +1,10 @@
-%define name viewarch
 %define realname ViewARCH
 %define realversion 0.0.12-9
-%define version %(echo %realversion | sed 's/-/_/g')
-%define release: 10
 
 Summary: An archive browser for GNU arch
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Name:    viewarch
+Version: %(echo %realversion | sed 's/-/_/g')
+Release: 10
 Source0: %{realname}-%{realversion}.tar.bz2
 Patch0: %name-confpath.patch
 License: GPL
@@ -17,7 +14,6 @@ Requires: tla
 Requires: python
 Requires: apache
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 An archive browser for GNU arch.
