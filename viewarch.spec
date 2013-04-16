@@ -2,7 +2,7 @@
 %define realname ViewARCH
 %define realversion 0.0.12-9
 %define version %(echo %realversion | sed 's/-/_/g')
-%define release: 9
+%define release: 10
 
 Summary: An archive browser for GNU arch
 Name: %{name}
