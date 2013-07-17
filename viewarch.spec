@@ -4,7 +4,7 @@
 Summary: An archive browser for GNU arch
 Name:    viewarch
 Version: %(echo %realversion | sed 's/-/_/g')
-Release: 10
+Release: 11
 Source0: %{realname}-%{realversion}.tar.bz2
 Patch0: %name-confpath.patch
 License: GPL
@@ -54,8 +54,7 @@ cat > %buildroot/%_sysconfdir/httpd/conf/webapps.d/%name.conf <<EOF
     AllowOverride All
     Options ExecCGI
     DirectoryIndex viewarch.cgi
-    Order allow,deny
-    Allow from all
+    Require all granted
 </Directory>
 EOF
 
