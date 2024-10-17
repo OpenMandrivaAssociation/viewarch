@@ -9,7 +9,7 @@ Source0: %{realname}-%{realversion}.tar.bz2
 Patch0: %name-confpath.patch
 License: GPL
 Group: Networking/WWW
-Url: http://arch.bluegate.org/viewarch.html
+Url: https://arch.bluegate.org/viewarch.html
 Requires: tla
 Requires: python
 Requires: apache
